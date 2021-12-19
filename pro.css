@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+.nav-bar{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: black;
+    margin: auto;
+    height: 100px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+.nav-list{
+    margin-right: 50px;
+}
+.nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+}
+.nav-list ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 0 0 20px;
+    position: relative;
+}
+.nav-list ul li a{
+    letter-spacing: .2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    margin-right: 2px;
+    transition: .15s ease;
+}
+.nav-list ul li a:hover{
+    color: crimson;
+}
+.container{
+    display: flex;
+    position: relative;
+    height: 900px
+}
+.leftside-bar{
+    background-color: black;
+    width: 23.33%;
+}
+.main-page{
+    background-color: rgba(147, 147, 180, 0.863);
+    width: 53.33%;
+}
+.rightside-bar{
+    background-color: black;
+    width: 23.33%;
+}
+.menu{
+    position: sticky;
+    top: 50%;    
+    -ms-transform: translateY(-50%);
+    margin: 0;
+    transform: translateY(-50%);
+}
+.menu ul{
+    position: initial;
+    display: block;
+    width: auto;
+}
+.menu ul li{
+    letter-spacing: .2rem;;
+    list-style-type: none;
+    display: block;
+    position: relative;
+    margin: 10% 20%;
+}
+.cta{
+    margin: 10% 15%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    margin-top: 10px;
+    border-radius: 50px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    transition: .15s ease;
+}
+.menu ul li a:hover{
+    color: crimson;
+}
+.rightside-bar{
+    position: relative;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.rightside-bar .events h2{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: white;
+    font-size: 1.75rem;
+}
+
+.events{
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    height: 40%;
+    border: 2px solid white;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-70%);
+}
+
+.events ul{
+    display: block;
+    position: initial;
+    width: auto;
+}
+.events ul li{
+    letter-spacing: .2rem;;
+    list-style-type: none;
+    display: block;
+    position: relative;
+    margin: 10% 20%;
+}
+.events ul li a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: white;
+    transition: .25s ease;
+}
+.events ul li a:hover{
+    font-size: 1.5rem;
+    color: crimson;
+}
