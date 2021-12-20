@@ -123,13 +123,19 @@ label{
 }
 #header .nav-list ul li a{
     font-size: 1.75rem;
+    letter-spacing: .2rem;
     color: white;
     text-transform: uppercase;
     margin-right: 2px;
+    transition: .15s ease;
 }
 #header .logo{
     width: 200px;
     cursor: pointer;
+}
+
+#header .nav-list ul li a:hover{
+    color: crimson;
 }
 
 
@@ -208,7 +214,7 @@ label{
     padding: 100px 0;
 }
 
-#service .service-top{
+#services .service-top{
     max-width: 500px;
     margin: 0 auto;
 }
@@ -265,6 +271,7 @@ label{
     text-align: left;
     font-size: 1.4rem;
     line-height: 1.9rem;
+    letter-spacing: .05rem;
 }
 
 
