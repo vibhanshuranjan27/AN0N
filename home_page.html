@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="pro.css">
     <link rel="stylesheet" href="master.css">
+    <script src = "make_post-modal.js"></script>
 </head>
 <body>
     <div class="banner">
@@ -33,10 +34,94 @@
                     <li><a href="profile_page.html">Profile</a></li>
                     <li><a href="#">Settings</a></li>
                 </ul>
-                <a href="#" type= "button" class = "cta">Post</a>
+                <a href="#" type= "button" id = "make_posts" class = "cta">Post</a>
             </div>
         </div>
         <div class="main-page">
+            <div class="post">
+                <div class="post-top">
+                    <img src="/images/avatar.png" alt="">
+                    <h3>@DeeXo</h3>
+                    <p>Dec 27, 2021 (14:28)</p>
+                </div>
+                <div class="post-bottom">
+                    <p>I'm starting to think that DevOps is a decent subject. Who would have thought?</p>
+                </div>
+                <div class="post-options">
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-top">
+                    <img src="/images/avatar1.png" alt="">
+                    <h3>@TVDSimp</h3>
+                    <p>Dec 27, 2021 (14:10)</p>
+                </div>
+                <div class="post-bottom">
+                    <p>That PB event yesterday was such a blast, but some people do be flexing a lot — in a good way, obviously.</p>
+                </div>
+                <div class="post-options">
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-top">
+                    <img src="/images/avatar2.png" alt="">
+                    <h3>@I_Wonder</h3>
+                    <p>Dec 27, 2021 (14:06)</p>
+                </div>
+                <div class="post-bottom">
+                    <p>To the girl who couldn't cross the road during break today: Do us all a favour and learn how to navigate through traffic.</p>
+                </div>
+                <div class="post-options">
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-top">
+                    <img src="/images/avatar3.png" alt="">
+                    <h3>@1DRules</h3>
+                    <p>Dec 27, 2021 (14:01)</p>
+                </div>
+                <div class="post-bottom">
+                    <p>Why do people ask for phone numbers if they are not going to call? It's irritating. Never giving away my phone number again. Actually, scratch that. I'm never going to a party again. Am I being too dramatic? Why do you care? Go away!</p>
+                </div>
+                <div class="post-options">
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
+                    </div>
+                    <div class="post-option">
+                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
+                    </div>
+                </div>
+            </div>
         </div> 
         <div class="rightside-bar">
             <div class="events">
@@ -49,6 +134,16 @@
                     <li><a href="#">Generic ISE Event #1</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="bg_modal" id = "bg-modal">
+        <div class="modal-content">
+            <div class="close" id = "close">+</div>
+            <img src="./images/avatar.png" alt="">
+            <form action="">
+                <textarea name="post-content" id="" cols="30" rows="10" placeholder="Put down your thoughts!"></textarea>
+                <a href="" type="button" class = "cta">Post</a>
+            </form>
         </div>
     </div>
 </body>

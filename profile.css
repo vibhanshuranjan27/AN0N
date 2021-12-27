@@ -60,7 +60,7 @@ html{
 .container{
     display: flex;
     position: relative;
-    height: 900px
+    height: 100%;
 }
 .left-sidebar{
     background-color: black;
@@ -101,8 +101,12 @@ html{
     letter-spacing: .2rem;
 }
 .main-page{
-    background-color: rgba(147, 147, 180, 0.863);
+    background-color: black;
     width: 48.33%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
 }
 .right-sidebar{
     background-color: black;
@@ -138,5 +142,55 @@ html{
     margin-top: 10px;
     letter-spacing: .2rem;
     font-weight: 400;
+    color: white;
+}
+.post{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    height: 180px;
+    border-radius: 15px;
+}
+.post-top{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+    height: 25%;
+    background-color: rgb(218, 206, 206);
+    display: flex;
+    position: relative;
+    align-items: center;
+
+}
+.post-top img{
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.post-top h3{
+    margin-left: 10px;
+}
+.post-top p{
+    margin-left: 360px;
+}
+.post-bottom{
+    height: 55%;
+    width: 100%;
+    background-color: black;
+}
+.post-options{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(218, 206, 206);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+}
+.post-bottom p{
+    font-size: 1.5rem;
+    padding: 20px;
     color: white;
 }
