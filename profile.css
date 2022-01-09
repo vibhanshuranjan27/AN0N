@@ -100,6 +100,31 @@ html{
     font-weight: 600;
     letter-spacing: .2rem;
 }
+
+.edit-button{
+    margin-top: 10px;
+    margin-left: 90px;
+}
+.cta{
+    margin: 10% 15%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    margin-top: 10px;
+    border-radius: 50px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color: crimson;
+}
 .main-page{
     background-color: black;
     width: 48.33%;
