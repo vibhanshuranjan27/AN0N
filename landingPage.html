@@ -77,7 +77,7 @@
             <div class="log-up">
                 <h1 class = 'section-title'>Reg<span>i</span>ster</h1>
                 <p class = "reg-section">Enter the following details</p>
-                <form class = "registeration" action="#">
+                <form class = "registeration" action="connect1.php" method="post">
                     <div class="form_item">
                         <label for="fname">First Name:</label><br>
                         <input type="text" id = "fname" name = "fname" required><br>
@@ -92,29 +92,27 @@
                     </div>
                     <div class="form_item">
                         <label for="email">College Email:</label><br>
-                        <input type="email" id = "email" name = "email" required><br>
+                        <input type="email" id = "clgemail" name = "clgemail" required><br>
                     </div>
-                    <div class="form_item custom_box">
-                        <label for="college">Choose Your College</label><br><br>
-                        <select name="college" id="college">
-                            <option value="DSCE">Dayananda Sagar College of Engineering</option>
-                            <option value="samp_1">Sample College 1</option>
-                            <option value="samp_2">Sample College 2</option>
-                        </select><br>
-                    </div>
+                    
                     <div class="form_item">
                         <label for="usn">USN:</label>
                         <input type="text" id = "usn" name = "usn" required>
                     <div class="form_item">
                         <label for="password">Enter Password</label><br>
-                        <input type="password" id = "password" name = "password"><br>
+                        <input type="password" id = "pass" name = "pass"><br>
                     </div>
                     <div class="form_item">
                         <label for="re_password">Re-Enter Password</label><br>
-                        <input type="password" id = "re_password" name = "re_password"><br>
+                        <input type="password" id = "re_pass" name = "re_pass"><br>
                     </div> 
-                    <div class="form_item">
-                        <input type = "submit" class = "cta" name = "submit">
+                    <div class="form_item">  
+                    <input type="submit" class = "cta" name = "submit"onClick="myFunction()"/>
+                     <script>
+                         function myFunction() {
+                         window.location.href="C:\xampp\htdocs\devops\AN0N-main\homePage.html";
+                        }
+                     </script>
                     </div>   
                 </form>
             </div>
@@ -128,8 +126,8 @@
             <div class="log-in">
                 <h1 class = 'section-title'>Lo<span>g</span>in</h1>
                 <p>Welcome Back</p>
-                <form class = 'login' action="#">
-                    <div class="form_item">
+                <form class = 'login' action="connect2.php" method="post">
+                    <div class="form_item" >
                         <label for="user">Username:</label><br>
                         <input type="text" id = "user" name = "user">
                     </div>
