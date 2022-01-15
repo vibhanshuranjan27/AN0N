@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="pro.css">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="master.css">
-    <script src = "make_post-modal.js"></script>
 </head>
 <body>
     <div class="banner">
@@ -17,7 +16,7 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home_page.html">Home</a></li>
                     <li><a href="#">Communities</a></li>
                     <li><a href="#">Sign Out</a></li>
                 </ul>
@@ -25,16 +24,46 @@
         </div>
     </div>
     <div class="container">
-        <div class="leftside-bar">
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="profile_page.php">Profile</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-                <a href="#" type= "button" id = "make_posts" class = "cta">Post</a>
+        <div class="left-sidebar">
+            <div class="image-div">
+                <img src="./images/avatar.png" alt="">
+            </div>
+            <div class="personal-info">
+                <?php
+                    session_start();
+                     $servername="localhost";
+                     $username="root";
+                     $password="";
+                     $database_name="network";
+                     $_SESSION['login'];
+                     //$_SESSION['id'];
+                     $conn = new mysqli('localhost','root','','network');
+                     $sql="SELECT * FROM login WHERE username='".$_SESSION['user']."'";
+                     //echo $_SESSION['user'];
+                     $query=mysqli_query($conn,$sql);
+                     $numrows=mysqli_num_rows($query);  
+                     //echo $numrows;
+                     if($numrows!=0)  
+                     {  
+                        while($row=mysqli_fetch_assoc($query))  
+                         {  
+                        $dbusername=$row['username'];  
+                       // echo $dbusername;
+                        $dbdescp=$row['description'];
+                       // echo $dbdescp;
+                       // echo $dbusername;
+                       // $dbpassword=$row['pass'];
+                       // echo $dbpassword;  
+                        }  
+                    }
+                ?>
+                <center style='color: white'><h1><?php echo $dbusername?></h1></center>
+                <p><?php echo $dbdescp?>
+
+                </p>
+            </div>
+            <div class="edit-button">
+                <a href="edit_profile_page.html" type= "button" id = "edit-info" class = "cta">Edit</a>
             </div>
         </div>
         <div class="main-page">
@@ -61,12 +90,12 @@
             </div>
             <div class="post">
                 <div class="post-top">
-                    <img src="/images/avatar1.png" alt="">
-                    <h3>@TVDSimp</h3>
-                    <p>Dec 27, 2021 (14:10)</p>
+                    <img src="/images/avatar.png" alt="">
+                    <h3>@DeeXo</h3>
+                    <p>Dec 24, 2021 (15:10)</p>
                 </div>
                 <div class="post-bottom">
-                    <p>That PB event yesterday was such a blast, but some people do be flexing a lot — in a good way, obviously.</p>
+                    <p>ISTG, some of these classes should come with complimentary cups of coffee.</p>
                 </div>
                 <div class="post-options">
                     <div class="post-option">
@@ -82,12 +111,12 @@
             </div>
             <div class="post">
                 <div class="post-top">
-                    <img src="/images/avatar2.png" alt="">
-                    <h3>@I_Wonder</h3>
-                    <p>Dec 27, 2021 (14:06)</p>
+                    <img src="/images/avatar.png" alt="">
+                    <h3>@DeeXo</h3>
+                    <p>Dec 24, 2021 (10:33)</p>
                 </div>
                 <div class="post-bottom">
-                    <p>To the girl who couldn't cross the road during break today: Do us all a favour and learn how to navigate through traffic.</p>
+                    <p>Engineering would be fun, they said. Where the hell are they!?</p>
                 </div>
                 <div class="post-options">
                     <div class="post-option">
@@ -103,12 +132,12 @@
             </div>
             <div class="post">
                 <div class="post-top">
-                    <img src="/images/avatar3.png" alt="">
-                    <h3>@1DRules</h3>
-                    <p>Dec 27, 2021 (14:01)</p>
+                    <img src="/images/avatar.png" alt="">
+                    <h3>@DeeXo</h3>
+                    <p>Dec 23, 2021 (11:39)</p>
                 </div>
                 <div class="post-bottom">
-                    <p>Why do people ask for phone numbers if they are not going to call? It's irritating. Never giving away my phone number again. Actually, scratch that. I'm never going to a party again. Am I being too dramatic? Why do you care? Go away!</p>
+                    <p>My life would be so much better without compulsory lab attendance -_-</p>
                 </div>
                 <div class="post-options">
                     <div class="post-option">
@@ -122,28 +151,18 @@
                     </div>
                 </div>
             </div>
-        </div> 
-        <div class="rightside-bar">
-            <div class="events">
-                <h2>Events</h2>
+            
+        </div>
+        <div class="right-sidebar">
+            <div class="my-stats">
+                <h1>Your Stats</h1>
                 <ul>
-                    <li><a href="#">Generic CPA Event #1</a></li>
-                    <li><a href="#">Generic CPA Event #2</a></li>
-                    <li><a href="#">Generic IEDC Event #1</a></li>
-                    <li><a href="#">Generic IEDC Event #2</a></li>
-                    <li><a href="#">Generic ISE Event #1</a></li>
+                    <li>Posts: 214</li>
+                    <li>Likes: 1896</li>
+                    <li>Contacts: 32</li>
+                    <li>Communities: 2</li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="bg_modal" id = "bg-modal">
-        <div class="modal-content">
-            <div class="close" id = "close">+</div>
-            <img src="./images/avatar.png" alt="">
-            <form action="">
-                <textarea name="post-content" id="" cols="30" rows="10" placeholder="Put down your thoughts!"></textarea>
-                <a href="" type="button" class = "cta">Post</a>
-            </form>
         </div>
     </div>
 </body>
