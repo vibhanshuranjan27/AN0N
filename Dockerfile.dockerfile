@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY src /users/Shrikar/Anon/src
+COPY . /usr/share/nginx/html/test
