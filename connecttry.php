@@ -1,9 +1,10 @@
 <?php
+	session_start();
 	$servername="localhost";
 	$username="root";
 	$password="";
 	$database_name="network";
-	session_start();
+	
 	$fname=$_POST['fname'];
 	//echo $fname;
 	$lname=$_POST['lname'];
@@ -14,7 +15,6 @@
 	$re_pass=$_POST['re_pass'];
 	$stmt='';
 	$conn='';
-	$_SESSION['login']=$username;
 	
 
 	//database connection
@@ -43,8 +43,8 @@
     	else{
 				$stmt=$conn->prepare("insert into login(fname, lname, username, clgemail, usn, pass, re_pass ) values(?,?,?,?,?,?,?)");
 				$stmt->bind_param("sssssss",$fname,$lname,$username,$clgemail,$USN,$pass,$re_pass);
-		
-				$stmt->execute();
+				//$_SESSION['variable']
+				//$stmt->execute();
             	header('Location: home_page.html');
         //}
        		}
