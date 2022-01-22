@@ -1,5 +1,5 @@
 <?php
-session_start();
+	session_start();
 	$servername="localhost";
 	$username="root";
 	$password="";
@@ -7,10 +7,15 @@ session_start();
 	
 	$user=$_POST['user'];
 	$pass=$_POST['pass'];
-	$_SESSION['login']=$user
+	$_SESSION['user']=$user;
 	//$_SESSION['id']=$num['id'];
 	//database connection
+	//database connection
 	$conn = new mysqli('localhost','root','','network');
+	if ($conn -> connect_errno) {
+ 		 echo "Failed to connect to MySQL: " . $conn -> connect_error;
+  		exit();
+		}
 	//$conn = new mysqli('localhost','root','','network');
 	if(isset($_POST["login"])){
 		$sql="SELECT * FROM login WHERE username='".$user."' and pass ='".$pass."'"; 
