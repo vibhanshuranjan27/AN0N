@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+.post-section{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 10px;
+}
+.close{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 3.2rem;
+    transform: rotate(45deg);
+}
+.post-section img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+textarea{
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 90px;
+    text-align: center;
+    outline: none;
+    resize: none;
+    padding: 15px;
+}
+.cta{
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color: crimson;
+}
