@@ -66,93 +66,58 @@
                 <a href="edit_profile_page.html" type= "button" id = "edit-info" class = "cta">Edit</a>
             </div>
         </div>
-        <div class="main-page">
-            <div class="post">
-                <div class="post-top">
-                    <img src="/images/avatar.png" alt="">
-                    <h3>@DeeXo</h3>
-                    <p>Dec 27, 2021 (14:28)</p>
-                </div>
-                <div class="post-bottom">
-                    <p>I'm starting to think that DevOps is a decent subject. Who would have thought?</p>
-                </div>
-                <div class="post-options">
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-top">
-                    <img src="/images/avatar.png" alt="">
-                    <h3>@DeeXo</h3>
-                    <p>Dec 24, 2021 (15:10)</p>
-                </div>
-                <div class="post-bottom">
-                    <p>ISTG, some of these classes should come with complimentary cups of coffee.</p>
-                </div>
-                <div class="post-options">
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-top">
-                    <img src="/images/avatar.png" alt="">
-                    <h3>@DeeXo</h3>
-                    <p>Dec 24, 2021 (10:33)</p>
-                </div>
-                <div class="post-bottom">
-                    <p>Engineering would be fun, they said. Where the hell are they!?</p>
-                </div>
-                <div class="post-options">
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-top">
-                    <img src="/images/avatar.png" alt="">
-                    <h3>@DeeXo</h3>
-                    <p>Dec 23, 2021 (11:39)</p>
-                </div>
-                <div class="post-bottom">
-                    <p>My life would be so much better without compulsory lab attendance -_-</p>
-                </div>
-                <div class="post-options">
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png" alt="">
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/carbon-copy/100/000000/comments.png"/>
-                    </div>
-                    <div class="post-option">
-                        <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png"/>
-                    </div>
-                </div>
-            </div>
+        <div class='main-page'>
+            <?php
+                session_start();
+                if(!isset($_SESSION['user']))
+                header('location:landingPage.html');
+    
+                $servername="localhost";
+                $username="root";
+                $password="";
+                $database_name="network";
+                $conn = new mysqli('localhost','root','','network');
+                if ($conn -> connect_errno) {
+                    echo "Failed to connect to MySQL: " . $conn -> connect_error;
+                    exit();
+                }
+
+                $sql = "SELECT * FROM posts WHERE username='".$_SESSION['user']."' ORDER BY post_id ASC";
+                $result = mysqli_query($conn,$sql);
             
+                while($row = mysqli_fetch_array($result)){
+                $post_id = $row['post_id'];
+                $username = $row['username'];
+                $time = $row['tim_e'];
+                $desc = $row['desc'];
+                $likes = $row['likes'];
+                $comments = $row['comments'];
+                echo "  
+                <div class='post'>
+                            <div class='post-top'>
+                                <img src='/images/avatar.png' alt=''>
+                                <h3>$username</h3>
+                                <p>$time</p>
+                            </div>
+                            <div class='post-bottom'>
+                                <p>$desc</p>
+                            </div>
+                            <div class='post-options'>
+                                <div class='post-option'>
+                                <img src='https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-like-instagram-flatart-icons-outline-flatarticons.png' alt=''>
+                                </div>
+                                <div class='post-option'>
+                                    <img src='https://img.icons8.com/carbon-copy/100/000000/comments.png'/>
+                                </div>
+                                <div class='post-option'>
+                                    <img src='https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-share-interface-kiranshastry-solid-kiranshastry-1.png'//>
+                                </div>
+                            </div>
+                    </div>";
+            }
+        ?>
         </div>
+        
         <div class="right-sidebar">
             <div class="my-stats">
                 <h1>Your Stats</h1>
