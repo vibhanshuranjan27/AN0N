@@ -39,7 +39,7 @@
     			//session_start();  
     			$_SESSION['user']=$user;  
   	    		/* Redirect browser */  
-    			header("Location: home_page.html");  
+    			header("Location: home_page.php");  
     		}  
     		else{
     			echo "invalid user";
