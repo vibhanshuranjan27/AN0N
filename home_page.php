@@ -75,7 +75,7 @@
                     exit();
                 }
 
-                $sql = "SELECT * FROM posts ORDER BY post_id ASC";
+                $sql = "SELECT * FROM posts ORDER BY post_id DESC";
                 $result = mysqli_query($conn,$sql);
             
                 while($row = mysqli_fetch_array($result)){
