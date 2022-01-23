@@ -35,11 +35,11 @@
                      $username="root";
                      $password="";
                      $database_name="network";
-                     $_SESSION['login'];
+                     //$_SESSION['login'];
                      //$_SESSION['id'];
                      $conn = new mysqli('localhost','root','','network');
                      $sql="SELECT * FROM login WHERE username='".$_SESSION['user']."'";
-                     echo $_SESSION['user'];
+                     //echo $_SESSION['user'];
                      $query=mysqli_query($conn,$sql);
                      $numrows=mysqli_num_rows($query);  
                      //echo $numrows;
