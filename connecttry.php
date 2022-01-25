@@ -41,7 +41,7 @@
   
     		if($username == $dbusername )  
     		{  
-    			header('Location: landingPage.html');
+    			header('Location: account_already_exists.html');
     		}
     	}
     	else{
