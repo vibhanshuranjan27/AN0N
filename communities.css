@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header{
+    min-height: 8vh;
+    background-color: black;
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    height: 100px;
+    max-width: 1300px;
+    padding-top: 0 10px;
+}
+
+#header .nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+}
+
+#header .nav-list ul li{
+    display: inline-block;
+    margin: 0 0 0 20px;
+    position: relative;
+}
+#header .nav-list ul li a{
+    font-size: 1.75rem;
+    letter-spacing: .2rem;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 2px;
+    transition: .15s ease;
+}
+#header .logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+#header .nav-list ul li a:hover{
+    color: crimson;
+}
+#community{
+    background-image: url(./images/group.jpeg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#community .community{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+#community::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#community h1{
+    font-size: 80px;
+    margin-top: 250px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+}
+#community .community-nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 466px;
+    height: 100px;
+    max-width: 1300px;
+    padding-top: 0 10px;
+}
+#community .community-nav ul{
+    margin-top: 170px;
+    position: absolute;
+    display: block;
+    height: auto;
+    width: fit-content;
+}
+
+#community .community-nav ul li{
+    display: inline-block;
+    margin: 0 0 0 20px;
+    position: relative;
+}
+#community .community-nav ul li a{
+    font-size: 1.75rem;
+    letter-spacing: .2rem;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 2px;
+    transition: .15s ease;
+}
+#community .community-nav ul li a:hover{
+    color: crimson;
+    font-size: 1.9rem;
+}
+#academic{
+    background-image: url(./images/academic.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#academic::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#academic .academic{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#academic .section-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#academic .section-top h1{
+    font-size: 4rem;
+    margin-bottom: 120px;
+    color: white;
+    letter-spacing: .75rem;
+}
+#academic .community-groups{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#academic img{
+    width: 480px;
+    height: 240px;
+    margin: auto 10px;
+}
+#academic .fadein img{
+    opacity:0.7;
+    transition: 1s ease;
+}
+#academic .fadein img:hover{
+    opacity:1;
+    transition: 1s ease;
+}
+#academic .community-groups h2{
+    color: white;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .75rem;
+}
+#entertainment{
+    background-image: url(./images/entertainment.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#entertainment::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#entertainment .entertainment{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#entertainment .section-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#entertainment .section-top h1{
+    font-size: 4rem;
+    margin-bottom: 120px;
+    color: white;
+    letter-spacing: .75rem;
+}
+#entertainment .community-groups{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#entertainment img{
+    width: 480px;
+    height: 240px;
+    margin: auto 10px;
+}
+#entertainment .fadein img{
+    opacity:0.7;
+    transition: 1s ease;
+}
+#entertainment .fadein img:hover{
+    opacity:1;
+    transition: 1s ease;
+}
+#entertainment .community-groups h2{
+    color: white;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .75rem;
+}
+#sports{
+    background-image: url(./images/sports.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#sports::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#sports .sports{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#sports .section-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#sports .section-top h1{
+    font-size: 4rem;
+    margin-bottom: 120px;
+    color: white;
+    letter-spacing: .75rem;
+}
+#sports .community-groups{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#sports img{
+    width: 480px;
+    height: 240px;
+    margin: auto 10px;
+}
+#sports .fadein img{
+    opacity:0.7;
+    transition: 1s ease;
+}
+#sports .fadein img:hover{
+    opacity:1;
+    transition: 1s ease;
+}
+#sports .community-groups h2{
+    color: white;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .75rem;
+}
