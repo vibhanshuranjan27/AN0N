@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="edit_profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="post-section">
+            <a href="home_page.html" class = 'close'>+</a>
+            <img src="./images/avatar.png" alt="">
+            <form class = "registeration" action="edit_profile_page.php" method="post">
+                <div class="form_item">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id = "username" name = "username" required><br>
+                </div>
+                <div class="form_item">
+                    <label for="og_password">Original Password:</label><br>
+                    <input type="password" id = "og_password" name = "og_password"><br>
+                </div>
+                <div class="form_item">
+                    <label for="ch_password">Change Password</label><br>
+                    <input type="password" id = "ch_password" name = "ch_password"><br>
+                </div>
+                <div class="form_item">
+                    <input type = "submit" class = "cta" name = "submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
