@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="post-section">
-            <a href="home_page.html" class = 'close'>+</a>
+            <a href="home_page.php" class = 'close'>+</a>
             <img src="./images/avatar.png" alt="">
             <form action="post.php" method="post">
                 <textarea name="post_content" id="" cols="30" rows="10" placeholder="What's Up? (Use 200 Characters)"></textarea>
