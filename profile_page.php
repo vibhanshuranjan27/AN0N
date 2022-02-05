@@ -16,9 +16,9 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li><a href="home_page.html">Home</a></li>
-                    <li><a href="#">Communities</a></li>
-                    <li><a href="#">Sign Out</a></li>
+                    <li><a href="home_page.php">Home</a></li>
+                    <li><a href="communities_page.html">Communities</a></li>
+                    <li><a href="landingPage.html">Sign Out</a></li>
                 </ul>
             </div>
         </div>
@@ -119,7 +119,7 @@
         </div>
         
         <div class="right-sidebar">
-            <div class="my-stats">
+            <!-- <div class="my-stats">
                 <h1>Your Stats</h1>
                 <ul>
                     <li>Posts: 214</li>
@@ -127,7 +127,7 @@
                     <li>Contacts: 32</li>
                     <li>Communities: 2</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <link rel= "icon" href="./images/Anon-logos.jpeg" type = "image/x-icon">
+    <title>Anon</title>
+</head>
+<body>
+    <!--Header-->
+
+    <section id = "header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="#"><img src="./images/Anon-logos_white.png" alt=""></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Features</a></li>
+                        <li><a href="#logup">Register</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Header-->
+    <!-- Hero Section-->
+    <section id = "hero">
+        <div class="hero container">
+            <div>
+                <h1>Welcome To<span></span></h1>
+                <h1>AN0N<span></span></h1>
+                <a href="#logup" type = "button" class = "cta">Register</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- End of Hero Section--> 
+
+    <!--Communities Section-->
+    <section id = "services">
+        <div class="services container">
+            <div class="service-top">
+                <h1 class = "section-title">Fea<span>t</span>ures</h1>
+                <p>These are the features we offer</p>
+            </div>
+            <div class="service-bottom">
+                <div class="service-item">
+                   <div class="icon"><img src= "https://img.icons8.com/dotty/80/000000/comment-discussion.png"/></div> 
+                   <h2>Forum</h2>
+                   <p>Provides a public forum, made for college students, to express their opinions and ideas without the fear of judgement</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/ios/50/000000/fsociety-mask.png"/></div> 
+                    <h2>Semi-Anonymous Posting</h2>
+                    <p>Users are identified by a username of their choice. AN0N encourages users to choose a username which does not give away their real identities</p>
+                 </div>
+                 <div class="service-item">
+                    <div class="icon"><img src="https://img.icons8.com/ios-filled/50/000000/groups.png"/></div> 
+                    <h2>Communities</h2>
+                    <p>Join communities, enjoy group chats built around your favourite subjects: TV Shows, Technology, Sports and many more</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Communities Section-->
+
+    <!--Log Up Section-->
+    <section id = logup>
+        <div class="logup container">
+            <div class="log-up">
+                <h1 class = 'section-title'>Reg<span>i</span>ster</h1>
+                <p class = "reg-section">Enter the following details</p>
+                <form class = "registeration" action="connecttry.php" method="post">
+                    <div class="form_item">
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id = "fname" name = "fname" required><br>
+                    </div>
+                    <div class="form_item">
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id = "lname" name = "lname" required><br>
+                    </div>
+                    <div class="form_item">
+                        <label for="username">Enter Username:</label><br>
+                        <input type="text" id = "username" name = "username" required><br>
+                    </div>
+                    <div class="form_item">
+                        <label for="email">College Email:</label><br>
+                        <input type="email" id = "clgemail" name = "clgemail" required><br>
+                    </div>
+                    
+                    <div class="form_item">
+                        <label for="usn">USN:</label>
+                        <input type="text" id = "usn" name = "usn" required>
+                    <div class="form_item">
+                        <label for="password">Enter Password</label><br>
+                        <input type="password" id = "pass" name = "pass"><br>
+                    </div>
+                    <div class="form_item">
+                        <label for="re_password">Re-Enter Password</label><br>
+                        <input type="password" id = "re_pass" name = "re_pass"><br>
+                    </div> 
+                    <div class="form_item">  
+                    <input type="submit" class = "cta" name = "submit"><!--onClick="myFunction()"/>-->
+                     <script>
+                         function myFunction() {
+                         window.location.href="C:\xampp\htdocs\devops\AN0N-main\homePage.html";
+                        }
+                     </script>
+                    </div>   
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--End of Log Up Section-->
+
+    <!--Log In Section-->
+    <section id = 'login'>
+        <div class="login container">
+            <div class="log-in">
+                <h1 class = 'section-title'>Lo<span>g</span>in</h1>
+                <p>Welcome Back</p>
+                <form class = 'login' action="connect2.php" method="post">
+                    <div class="form_item" >
+                        <label for="user">Username:</label><br>
+                        <input type="text" id = "user" name = "user">
+                    </div>
+                    <div class="form_item">
+                        <label for="pass">Password</label>
+                        <input type="password" id = "pass" name = "pass">
+                    </div>
+                    <div class="form_item">
+                        <input type="submit" class = "cta" name = "login"> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--End of Log In Section-->
+    
+    <!--Footer-->
+    <section id = "footer">
+        <div class="footer container">
+            <div class="brand"><h1>AN0<span>N</span></h1></div>
+            <h2>Channel Your Inner-Self</h2>
+            <div class="social-icons">
+                <div class="social-items">
+                    <a href="#"><img src="https://img.icons8.com/ios/50/000000/twitter.png"/></a>
+                </div>
+                <div class="social-items">
+                    <a href="#"><img src="https://img.icons8.com/dotty/80/000000/facebook-new.png"/></a>
+                </div>
+                <div class="social-items">
+                    <a href="#"><img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/></a>
+                </div>
+            </div>
+            <p>Copyright © 2021 AN0N. All Rights Reserved</p>
+        </div>
+    </section>
+    <!--End of Footer-->
+</body>
+</html>

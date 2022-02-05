@@ -19,7 +19,7 @@
                     {
                         //$_SESSION['user']=$username;
                         //echo "yep";
-                        header('Location: home_page.html');
+                        header('Location: home_page.php');
                 }
                 else{
                     echo "FUCK OFF";

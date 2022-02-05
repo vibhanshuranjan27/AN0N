@@ -39,9 +39,9 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                     <li><a href="#">Home</a></li>
-                     <li><a href="#">Communities</a></li>
-                     <li><a href="#">Sign Out</a></li>
+                     <li><a href="home_page.php">Home</a></li>
+                     <li><a href="communities_page.html">Communities</a></li>
+                     <li><a href="landingPage.html">Sign Out</a></li>
                     </ul>
                 </div>
             </div>
